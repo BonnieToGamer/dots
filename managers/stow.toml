@@ -1,0 +1,12 @@
+# GNU stow
+
+add = "echo 'Stow add does not exist and therefore will not run.'"
+remove = "echo 'Stow remove does not exist and therefore will not run.'"
+sync = "stow --restow -d /home/filip/.config/rebos/home_manager -t /home/filip/ ."
+
+plural_name = "GNU Stow"
+
+hook_name = "stow"
+
+[config]
+many_args = false

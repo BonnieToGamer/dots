@@ -1,0 +1,36 @@
+# --------------------- #
+#    Generation File    #
+# --------------------- #
+
+# Other generation files to import. (Example: intensive_apps -> ~/.config/rebos/imports/intensive_apps.toml)
+imports = [
+    "applications",
+    "cli",
+    "sway",
+    "fonts",
+    "ricing",
+    "amd_gpu",
+    "gaming",
+    "development/cs",
+    "ip_cam",
+    "bluetooth",
+    "android"
+]
+
+# Packages to be installed via the native package manager.
+[managers.system]
+items = [
+
+]
+
+# Packages to be installed via Flatpak.
+[managers.flatpak]
+items = [
+    # "com.github.tchx84.Flatseal",
+]
+
+# Packages to be installed via Cargo.
+[managers.cargo]
+items = [
+    # "bacon",
+]

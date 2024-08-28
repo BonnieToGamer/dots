@@ -1,0 +1,109 @@
+@define-color base00 #24273a;
+@define-color base01 #1e2030;
+@define-color base02 #363a4f;
+@define-color base03 #494d64;
+@define-color base04 #5b6078;
+@define-color base05 #cad3f5;
+@define-color base06 #f4dbd6;
+@define-color base07 #b7bdf8;
+@define-color base08 #ed8796;
+@define-color base09 #f5a97f;
+@define-color base0A #eed49f;
+@define-color base0B #a6da95;
+@define-color base0C #8bd5ca;
+@define-color base0D #8aadf4;
+@define-color base0E #c6a0f6;
+@define-color base0F #f0c6c6;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    /* min-height: 0; */
+}
+
+window#waybar {
+    background-color: @base00;
+    color: @base05;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    padding: 0 0.6em;
+    background-color: transparent;
+    color: @base05;
+    border-bottom: 3px solid transparent;
+    min-width: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+    background: @base02;
+    box-shadow: inherit;
+}
+
+#workspaces button.focused {
+    border-bottom: 3px solid @base05;
+}
+
+#workspaces button.urgent {
+    background-color: @base09;
+}
+
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor {
+    padding: 0 3px;
+    margin: 0 4px;
+    color: @base05;
+}
+
+
+#battery.charging, #battery.plugged {
+    color: @base0B;
+}
+
+@keyframes blink {
+    to {
+        color: @base05;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @base08;
+}
+
+label:focus {
+    background-color: @base03;
+}
+
+/* #tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+} */
+
+#idle_inhibitor {
+    padding: 0 10px 0 0;
+}
+
+
+#idle_inhibitor.activated {
+}
+
+#custom-power {
+    padding: 0 5px 0 8px;
+    background-color: @base05;
+    color: @base01;
+    font-size: 16;
+}

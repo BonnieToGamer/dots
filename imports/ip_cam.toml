@@ -1,0 +1,7 @@
+[managers.system]
+items = [
+    "android-tools",
+    "v4l2loopback-dkms",
+    "ffmpeg",
+    "android-udev"
+]

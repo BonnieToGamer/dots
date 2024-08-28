@@ -1,0 +1,19 @@
+[managers.system]
+items = [
+    "swayfx",
+    "waybar",
+    "wofi",
+    "xorg-wayland",
+    "xorg-xlsclients",
+    "qt5-wayland",
+    "glfw-wayland",
+    "autotiling",
+    "swaybg",
+    "swaylock",
+    "swayidle",
+    "xdg-desktop-portal-wlr",
+    "grim",
+    "grimshot",
+    "wl-clipboard",
+    "sway-audio-idle-inhibit-git"
+]

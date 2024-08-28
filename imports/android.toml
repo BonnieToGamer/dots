@@ -1,0 +1,10 @@
+[managers.system]
+items = [
+    "android-tools",
+    "curl",
+    "whiptail",
+    "pv",
+    "bc",
+    "secure-delete",
+    "zenity"
+]

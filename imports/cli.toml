@@ -1,0 +1,8 @@
+[managers.system]
+items = [
+    "git",
+    "stow",
+    "fastfetch",
+    "p7zip",
+    "curl"
+]

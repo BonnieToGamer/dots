@@ -1,0 +1,6 @@
+[managers.system]
+items = [
+    "ttf-hack-nerd",
+    "ttf-fantasque-sans-mono",
+    "ttf-liberation"
+]

@@ -1,0 +1,15 @@
+[managers.system]
+items = [
+    "visual-studio-code-bin",
+    "vesktop",
+    "alacritty",
+    "spotify-launcher",
+    "awf-gtk3",
+    "nemo",
+    "fontpreview",
+    "sxiv",
+    "mako",
+    "wine",
+    "tidal-hifi-git",
+    "vice"
+]
