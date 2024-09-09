@@ -6,7 +6,9 @@
 imports = [
     "applications",
     "cli",
-    "sway",
+    "desktops/sway",
+    "desktops/wayland",
+    "desktops/qtile",
     "fonts",
     "ricing",
     "amd_gpu",

@@ -1,0 +1,10 @@
+[managers.system]
+items = [
+    "swayfx",
+    "waybar",
+    "autotiling",
+    "swaybg",
+    "swaylock",
+    "swayidle",
+    "sway-audio-idle-inhibit-git"
+]
