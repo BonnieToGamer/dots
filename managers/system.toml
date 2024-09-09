@@ -11,7 +11,7 @@
 add = "yay -S #:? --noconfirm" # Example: sudo apt install #:?
 remove = "yay -R #:? --noconfirm" # Example: sudo apt remove #:?
 sync = "yay -Syy --noconfirm" # Example: sudo apt update
-upgrade = "yay -Syu --noconfirm" # Example: sudo apt upgrade
+upgrade = "eos-update" # Example: sudo apt upgrade
 
 plural_name = "system packages"
 

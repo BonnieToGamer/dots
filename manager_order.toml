@@ -3,5 +3,6 @@ begin = [
 ]
 
 end = [
+    "flatpak",
     "stow"
 ]
