@@ -1,19 +1,31 @@
-@define-color base00 #24273a;
-@define-color base01 #1e2030;
-@define-color base02 #363a4f;
-@define-color base03 #494d64;
-@define-color base04 #5b6078;
-@define-color base05 #cad3f5;
-@define-color base06 #f4dbd6;
-@define-color base07 #b7bdf8;
-@define-color base08 #ed8796;
-@define-color base09 #f5a97f;
-@define-color base0A #eed49f;
-@define-color base0B #a6da95;
-@define-color base0C #8bd5ca;
-@define-color base0D #8aadf4;
-@define-color base0E #c6a0f6;
-@define-color base0F #f0c6c6;
+@define-color bg_dim      #1e2326;
+@define-color bg0         #272e33;
+@define-color bg1         #2e383c;
+@define-color bg2         #374145;
+@define-color bg3         #414b50;
+@define-color bg4         #495156;
+@define-color bg5         #4f6b58;
+@define-color bg_red      #4c3743;
+@define-color bg_visual   #493b40;
+@define-color bg_yellow   #45443c;
+@define-color bg_green    #3c4841;
+@define-color bg_blue     #384b55;
+@define-color bg_aqua     #304940;
+@define-color bg_purple   #432949;
+@define-color red         #e67e80;
+@define-color orange      #e69875;
+@define-color yellow      #dbbc7f;
+@define-color green       #a7c080;
+@define-color blue        #7fbbb3;
+@define-color aqua        #83c092;
+@define-color purple      #d699b6;
+@define-color fg          #d3c6aa;
+@define-color statusline1 #a7c080;
+@define-color statusline2 #d3c6aa;
+@define-color statusline3 #e67e80;
+@define-color gray0       #7a8478;
+@define-color gray1       #859289;
+@define-color gray2       #9da9a0;
 
 * {
     border: none;
@@ -21,11 +33,12 @@
     font-family: "Hack Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     /* min-height: 0; */
+    border-radius: 2px;
 }
 
 window#waybar {
-    background-color: @base00;
-    color: @base05;
+    background-color: @bg_dim;
+    color: @fg;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -34,26 +47,52 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-#workspaces button {
-    padding: 0 0.6em;
-    background-color: transparent;
-    color: @base05;
-    border-bottom: 3px solid transparent;
-    min-width: 0;
+#custom-separator {
+    margin-left: 5px;
 }
+
+#workspaces button {
+    margin: 5px 0px 5px 0px;
+    padding: 0 0.6em;
+    background-color: @green;
+    border-bottom: 4px solid @bg_green;
+    color: @bg_dim;
+    min-width: 0;
+    border-radius: 0px;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  #workspaces button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: @base02;
-    box-shadow: inherit;
+    border-top: 4px solid transparent;
+    border-bottom: none
 }
 
-#workspaces button.focused {
-    border-bottom: 3px solid @base05;
+/* clicked */
+#workspaces button.active {
+    border-top: 4px solid transparent;
+    border-bottom: none
 }
 
 #workspaces button.urgent {
-    background-color: @base09;
+    background-color: @red;
+    border-bottom: 4px solid @bg_red;
+}
+
+#window {
+    background-color: @bg1;
+    border-bottom: 4px solid @bg0;
+    color: @fg;
+    padding: 5px;
+    margin: 5px;
 }
 
 #clock,
@@ -65,10 +104,23 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor {
     padding: 0 3px;
-    margin: 0 4px;
-    color: @base05;
+    margin: 5px 5px 5px -1px;
+    color: @fg;
 }
 
+
+#clock {
+    background-color: @aqua;
+    color: @bg_dim;
+    border-bottom: 4px solid @bg_aqua;
+}
+
+#pulseaudio {
+    background-color: @yellow;
+    color: @bg_dim;
+    border-bottom: 4px solid @bg_yellow;
+    padding-right: 10px;
+}
 
 #battery.charging, #battery.plugged {
     color: @base0B;
@@ -102,8 +154,11 @@ label:focus {
 }
 
 #custom-power {
-    padding: 0 5px 0 8px;
-    background-color: @base05;
-    color: @base01;
+    padding: 0 0 0 9px;
+    margin: 5px;
+    margin-left: 0px;
+    background-color: @blue;
+    color: @bg0;
     font-size: 16;
+    border-bottom: 4px solid @bg_blue;
 }

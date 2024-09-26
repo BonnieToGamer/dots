@@ -133,11 +133,11 @@ for_window {
 
 layer_effects "waybar" corner_radius 0
 
-output * background ./berserk.jpeg fill
+output * background ../wallpapers/berserk.jpeg fill
 
 mouse_warping none
 
-set $locker 'swaylock -f -i ~/.config/sway/circuit_two.png --indicator-y-position 1000 --inside-color 2e3440 --inside-clear-color d08770 --inside-ver-color 5e81ac --inside-wrong-color bf616a --key-hl-color 88c0d0 --line-color 88c0d0 --line-clear-color d08770 --line-ver-color 5e81ac --line-wrong-color bf616a --ring-color 434c5e --ring-clear-color 434c5e --ring-ver-color 434c5e --ring-wrong-color 434c5e --text-color eceff4 --text-clear-color eceff4 --text-ver-color eceff4 --text-wrong-color eceff4'
+set $locker 'swaylock -f -i ~/.config/wallpapers/circuit_two.png --indicator-y-position 1000 --inside-color 2e3440 --inside-clear-color d08770 --inside-ver-color 5e81ac --inside-wrong-color bf616a --key-hl-color 88c0d0 --line-color 88c0d0 --line-clear-color d08770 --line-ver-color 5e81ac --line-wrong-color bf616a --ring-color 434c5e --ring-clear-color 434c5e --ring-ver-color 434c5e --ring-wrong-color 434c5e --text-color eceff4 --text-clear-color eceff4 --text-ver-color eceff4 --text-wrong-color eceff4'
 
 ### Key bindings
 #

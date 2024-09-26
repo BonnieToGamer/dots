@@ -4,11 +4,11 @@
  * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
  *******************************************************************************/
 
-@define-color bg0 #24273a;
-@define-color bg1 #1e2030;
-@define-color fg0 #f4dbd6;
-@define-color accent-color #cad3f5;
-@define-color urgent-color #ed8796;
+@define-color bg0 #1e2326;
+@define-color bg1 #495156;
+@define-color fg0 #d3c6aa;
+@define-color accent-color #a7c080;
+@define-color urgent-color #e67e80;
 
 * {
     font-family: "Hack Nerd Font";
@@ -18,6 +18,7 @@
 
     margin: 0;
     padding: 0;
+    border-radius: 2px;
 }
 
 window {

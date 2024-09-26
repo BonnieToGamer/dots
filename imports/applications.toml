@@ -11,5 +11,7 @@ items = [
     "mako",
     "wine",
     "tidal-hifi-git",
-    "vice"
+    "vice",
+    "vlc",
+    "docker"
 ]
