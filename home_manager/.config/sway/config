@@ -151,8 +151,8 @@ set $locker 'swaylock -f -i ~/.config/sway/circuit_two.png --indicator-y-positio
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-    bindsym XF86MonBrightnessDown exec light -U 5
-    bindsym XF86MonBrightnessUp exec light -A 5
+    bindsym XF86MonBrightnessDown exec brightnessctl s 50-
+    bindsym XF86MonBrightnessUp exec brightnessctl s 50+
     
     bindsym $mod+l exec $locker
     bindsym $mod+e exec nemo
