@@ -15,5 +15,12 @@ items = [
     "grim",
     "grimshot",
     "wl-clipboard",
-    "sway-audio-idle-inhibit-git"
+    "sway-audio-idle-inhibit-git",
+    "gdm",
+    "brightnessctl"
+]
+
+[managers.serv_startup]
+items = [
+    "gdm.service"
 ]

@@ -1,14 +1,9 @@
 #!/bin/bash
 
 # This script installs rebos and sets it up.
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root or with sudo"
-  exit
-fi
 
-
-echo -e "\n[oglo-arch-repo]\nSigLevel = Optional DatabaseOptional\nServer = https://gitlab.com/Oglo12/\$repo/-/raw/main/\$arch" | tee -a /etc/pacman.conf
-pacman -Syy
+sudo echo -e "\n[oglo-arch-repo]\nSigLevel = Optional DatabaseOptional\nServer = https://gitlab.com/Oglo12/\$repo/-/raw/main/\$arch" | sudo tee -a /etc/pacman.conf
+sudo pacman -Syy
 
 yay -S rebos --noconfirm
 

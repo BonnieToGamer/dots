@@ -4,5 +4,7 @@ begin = [
 
 end = [
     "flatpak",
-    "stow"
+    "stow",
+    "serv_start",
+    "serv_now"
 ]

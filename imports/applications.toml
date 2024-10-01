@@ -1,5 +1,6 @@
 [managers.system]
 items = [
+    "flatpak",
     "visual-studio-code-bin",
     "vesktop",
     "alacritty",
@@ -11,5 +12,12 @@ items = [
     "mako",
     "wine",
     "tidal-hifi-git",
-    "vice"
+    "vice",
+    "auto-cpufreq",
+    "envycontrol"
+]
+
+[managers.serv_now]
+items = [
+    "auto-cpufreq"
 ]
