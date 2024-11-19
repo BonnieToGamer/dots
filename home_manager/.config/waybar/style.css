@@ -72,14 +72,14 @@ window#waybar.hidden {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    border-top: 4px solid transparent;
+    margin-top: 8px;
     border-bottom: none
 }
 
 /* clicked */
 #workspaces button.active {
-    border-top: 4px solid transparent;
-    border-bottom: none
+    margin-top: 8px;
+    border-bottom: none;
 }
 
 #workspaces button.urgent {
@@ -120,6 +120,11 @@ window#waybar.hidden {
     color: @bg_dim;
     border-bottom: 4px solid @bg_yellow;
     padding-right: 10px;
+}
+
+#clock:hover, #pulseaudio:hover, #custom-power:hover {
+    margin-top: 8px;
+    border-bottom: none;
 }
 
 #battery.charging, #battery.plugged {
