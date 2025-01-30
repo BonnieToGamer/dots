@@ -1,0 +1,19 @@
+[managers.system]
+items = [
+    "wofi",
+    "xorg-wayland",
+    "xorg-xlsclients",
+    "qt5-wayland",
+    "glfw-wayland",
+    "xdg-desktop-portal-wlr",
+    "grim",
+    "grimshot",
+    "wl-clipboard",
+    "gdm",
+    "brightnessctl"
+]
+
+[managers.serv_startup]
+items = [
+    "gdm.service"
+]
