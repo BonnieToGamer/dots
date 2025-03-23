@@ -1,11 +1,10 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 1, // Gaps between modules (4px)
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "spacing": 1,
     "margin": "0 0 0 0",
-    // Choose the order of the modules
+
     "modules-left": ["custom/separator", "hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["custom/speaker_toggle", "custom/monitor_selector", "idle_inhibitor", "backlight", "tray", "pulseaudio", "battery", "clock", "custom/power"],
@@ -26,16 +25,15 @@
     "custom/speaker_toggle": {
         "format": "{icon}",
         "return-type": "json",
-        "exec": "cat ~/.config/speaker_state",  // Command to get the current state
+        "exec": "cat ~/.config/speaker_state",
         "interval": 1,
-        "on-click": "bash ~/.config/toggle_speakers.sh",  // Script to toggle the state
+        "on-click": "bash ~/.config/toggle_speakers.sh",
         "format-icons": {
             "on": "󰓃", 
             "off": "󰓄"
         }
     },
 
-    // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
         "on-click": "activate",
@@ -70,35 +68,6 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%b %d}"
     },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon} ",
-        "format-charging": "{capacity}% 󱐋 ",
-        "format-plugged": "{capacity}%  ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{icon}",
-        "format-ethernet": " ",
-        "tooltip-format": "{essid} ({signalStrength}%) | {ifname} via {gwaddr} | {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
-    },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -111,11 +80,12 @@
         },
         "on-click": "pavucontrol"
     },
+
     "custom/power": {
         "format": "{icon}",
         "format-icons": "󰕰 ",
         "exec-on-event": true,
-        "on-click": "~/.config/wofi-power.sh",
+        "on-click": "~/.config/wofi-power.mjs",
         "tooltip": false
     }
 }
