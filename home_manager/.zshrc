@@ -3,6 +3,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias clear='tput reset'
 PROMPT='%F{#a7c080}[%n@%m %1~]%# %F{#d3c6aa}'
 
 eval "$(zoxide init zsh)"
@@ -27,3 +28,20 @@ bindkey "^[[1;5C" forward-word      # Ctrl + Right arrow
 bindkey -s '\e[2~' ''               # Insert
 
 export PATH="$PATH:/home/filip/.dotnet/tools"
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+
+fastfetch
+
+# pnpm
+export PNPM_HOME="/home/filip/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
+. "$HOME/.cargo/env"
+

@@ -1,18 +1,38 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 1, // Gaps between modules (4px)
     "margin": "0 0 0 0",
     // Choose the order of the modules
     "modules-left": ["custom/separator", "hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "backlight", "tray", "pulseaudio", "battery", "clock", "custom/power"],
+    "modules-right": ["custom/speaker_toggle", "custom/monitor_selector", "idle_inhibitor", "backlight", "tray", "pulseaudio", "battery", "clock", "custom/power"],
 
     "custom/separator": {
         "format": "​",
         "tooltip": false
+    },
+
+    "custom/monitor_selector": {
+        "format": "{icon}",
+        "format-icons": "󰍹 ",
+        "exec-on-event": true,
+        "on-click": "~/.config/monitor-selector.mjs",
+        "tooltip": false
+    },
+
+    "custom/speaker_toggle": {
+        "format": "{icon}",
+        "return-type": "json",
+        "exec": "cat ~/.config/speaker_state",  // Command to get the current state
+        "interval": 1,
+        "on-click": "bash ~/.config/toggle_speakers.sh",  // Script to toggle the state
+        "format-icons": {
+            "on": "󰓃", 
+            "off": "󰓄"
+        }
     },
 
     // Modules configuration
