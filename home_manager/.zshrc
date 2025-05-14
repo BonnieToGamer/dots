@@ -8,13 +8,6 @@ PROMPT='%F{#a7c080}[%n@%m %1~]%# %F{#d3c6aa}'
 
 eval "$(zoxide init zsh)"
 
-# auto start ssh-agent
-if [ -S ~/.ssh/socket ]; then
-    eval $(ssh-agent)
-    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/socket
-fi
-export SSH_AUTH_SOCK=~/.ssh/socket
-
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -28,9 +21,8 @@ bindkey "^[[1;5C" forward-word      # Ctrl + Right arrow
 bindkey -s '\e[2~' ''               # Insert
 
 export PATH="$PATH:/home/filip/.dotnet/tools"
+export PATH="$PATH:/home/filip/.local/bin"
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
-
-fastfetch
 
 # pnpm
 export PNPM_HOME="/home/filip/.local/share/pnpm"
@@ -45,3 +37,4 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 . "$HOME/.cargo/env"
 
+fastfetch

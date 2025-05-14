@@ -1,37 +1,23 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
+    "height": 16,
     "spacing": 1,
     "margin": "0 0 0 0",
+    "output": ["DP-1"],
+    
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "clock", "custom/power", "tray"],
 
-    "modules-left": ["custom/separator", "hyprland/workspaces", "hyprland/mode"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/speaker_toggle", "custom/monitor_selector", "idle_inhibitor", "backlight", "tray", "pulseaudio", "battery", "clock", "custom/power"],
-
-    "custom/separator": {
-        "format": "​",
-        "tooltip": false
+    "cpu": {
+        "format": "[CPU:{usage}%]",
+        "interval": 10
     },
 
-    "custom/monitor_selector": {
-        "format": "{icon}",
-        "format-icons": "󰍹 ",
-        "exec-on-event": true,
-        "on-click": "~/.config/monitor-selector.mjs",
-        "tooltip": false
-    },
-
-    "custom/speaker_toggle": {
-        "format": "{icon}",
-        "return-type": "json",
-        "exec": "cat ~/.config/speaker_state",
-        "interval": 1,
-        "on-click": "bash ~/.config/toggle_speakers.sh",
-        "format-icons": {
-            "on": "󰓃", 
-            "off": "󰓄"
-        }
+    "memory": {
+        "format": "[MEM:{percentage}%]",
+        "interval": 30
     },
 
     "hyprland/workspaces": {
@@ -40,50 +26,46 @@
         "all-outputs": true,
         "format": "{name}"
     },
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+
     "hyprland/window": {
-        "format": "{title}",
-        "max-length": 50,
+        "format": "[{title}]",
+        "max-length": 500,
         "rewrite": {
-            "filip@endeavour(.*)": " $1",
             "(.*)Mozilla Firefox": "󰈹 $1",
             "(.*) - Visual Studio Code": "󰘐 $1"
         }
     },
+
     "idle_inhibitor": {
-        "format": "{icon}",
+        "format": "[{icon}]",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "AWAKE",
+            "deactivated": "ASLEEP"
         }
     },
+
     "tray": {
-        "spacing": 10
+        "spacing": 10,
+        "icon-size": 16
     },
 
     "clock": {
-        "format": "󰥔 {:%H:%M}",
+        "format": "[{:%H:%M}]",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%b %d}"
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
-        "format-muted": "{volume}% ",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-icons": {
-            "default": ["", "", ""]
-        },
+        "format": "[VOL:{volume}%]",
+        "format-muted": "[VOL:{volume}%]",
+        "format-bluetooth": "[VOL:{volume}%]",
+        "format-bluetooth-muted": "[{icon}]",
         "on-click": "pavucontrol"
     },
 
     "custom/power": {
-        "format": "{icon}",
-        "format-icons": "󰕰 ",
+        "format": "[POWER]",
         "exec-on-event": true,
         "on-click": "~/.config/wofi-power.mjs",
         "tooltip": false
