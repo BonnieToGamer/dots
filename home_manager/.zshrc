@@ -37,4 +37,6 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 . "$HOME/.cargo/env"
 
+eval $(thefuck --alias)
+
 fastfetch
