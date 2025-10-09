@@ -39,4 +39,23 @@ export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
 eval $(thefuck --alias)
 
+export ROCM_PATH=/opt/rocm
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
+export PATH=/opt/rocm/bin:$PATH
+export LD_LIBRARY_PATH=/opt/rocm/lib:$LD_LIBRARY_PATH
+
 fastfetch
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/filip/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export CHROME_EXECUTABLE=chromium
+export ANDROID_SDK_ROOT=/home/filip/Android/Sdk
+export ANDROID_HOME=/home/filip/Android/Sdk
+export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
+export PATH=$PATH:$HOME/flutter/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
+
+alias vps='ssh 217.160.224.13'
