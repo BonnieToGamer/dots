@@ -57,5 +57,3 @@ export ANDROID_HOME=/home/filip/Android/Sdk
 export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
 export PATH=$PATH:$HOME/flutter/bin
 export PATH=$PATH:$HOME/.pub-cache/bin
-
-alias vps='ssh 217.160.224.13'
